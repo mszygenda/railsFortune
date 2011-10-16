@@ -1,0 +1,5 @@
+<% @comments.each do |comment| %>
+		$("comments_<%= @fortune_id %>").html("<%=
+render :partial => comment, :locals => {:comment => comment }
+%>");
+<% end %>

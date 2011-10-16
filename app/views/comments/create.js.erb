@@ -1,0 +1,2 @@
+var partial = "<%= escape_javascript render :partial => "comment", :locals => { :comment => @comment } %>";
+$("#comments_<%= @comment.fortune_id %> > div.commentsList").prepend(partial);

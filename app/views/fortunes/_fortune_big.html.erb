@@ -1,0 +1,24 @@
+<div class="fortuneBig">
+	<div class="shortContent">
+		<%= fortune.content_short %>
+	</div>
+	<div class="fullContent">
+		<%= simple_format fortune.content %>		
+
+		<p class="author">
+			<%= fortune.author %>
+		</p>
+
+		<div id="comments_<%= fortune.id %>">
+			<h2>Add new comment</h2>
+			<div class="newComment">
+				<%= render :partial => "comments/form", :locals => { :comment => Comment.new { |c| c.fortune_id = fortune.id } }%>
+			</div>
+			
+			<h2>Comments</h2>
+			<div class="commentsList">
+				<%= render :partial => "comments/comment", :collection => fortune.comments %>
+			</div>
+		</div>
+	</div>
+</div>

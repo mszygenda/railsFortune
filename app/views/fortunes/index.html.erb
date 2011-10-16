@@ -1,0 +1,15 @@
+<h1>Listing fortunes</h1>
+
+<div class="grid">
+	<% @fortunes.each do |fortune| %>
+	<div class="gridElement">
+		<%= render :partial => "fortune_big", :locals  => { :fortune => fortune }  %>
+	</div>
+	<% end %>
+
+	<br />
+</div>
+<div id="listMenu">
+	<%= will_paginate @fortunes %>
+	<%= link_to 'New Fortune', new_fortune_path %>
+</div>

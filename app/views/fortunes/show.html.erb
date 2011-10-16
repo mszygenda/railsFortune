@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<div class="fortuneBig">
+	<div class="shortContent">
+		<%= @fortune.content_short %>
+	</div>
+	<div class="fullContent">
+		<%= simple_format @fortune.content %>		
+	</div>
+	<p class="author">
+		<%= @fortune.author %>
+	</p>
+</div>
+
+<%= link_to 'List of cookies', fortunes_path %>

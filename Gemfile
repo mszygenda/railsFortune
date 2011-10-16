@@ -18,6 +18,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'will_paginate', :git => 'git://github.com/mislav/will_paginate.git', :branch => 'rails3'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
