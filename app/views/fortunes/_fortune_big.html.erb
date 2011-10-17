@@ -12,7 +12,7 @@
 		<div id="comments_<%= fortune.id %>">
 			<h2>Add new comment</h2>
 			<div class="newComment">
-				<%= render :partial => "comments/form", :locals => { :comment => Comment.new { |c| c.fortune_id = fortune.id } }%>
+				<%= render :partial => "comments/form", :locals => { :comment => fortune.comments.new } %>
 			</div>
 			
 			<h2>Comments</h2>
