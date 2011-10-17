@@ -5,3 +5,8 @@ form.new_comment textarea {
 		height: 100px;
 		witdh: 300px;
 }
+
+div.comment > p.author {
+    text-align: right;
+    font-style: italic;
+}
