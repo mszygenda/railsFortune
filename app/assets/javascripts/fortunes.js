@@ -11,6 +11,10 @@ function showHideFullContent()
 		fullContent.show('fast');
 }
 
-$(document).ready(function() {
+function registerEventHandlers() {
 		$('div.fortuneBig').click(showHideFullContent);
+}
+
+$(document).ready(function() {
+		registerEventHandlers();
 });

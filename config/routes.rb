@@ -1,8 +1,12 @@
 RailsFortune::Application.routes.draw do
   resources :comments
 
-  resources :fortunes
-
+  resources :fortunes do
+    collection do
+      get :random
+    end
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

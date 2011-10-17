@@ -8,6 +8,7 @@ div.fortuneBig {
 
 div.fullContent {
 		display: none;
+		max-width: 300px;
 }
 
 div.gridElement {
@@ -25,3 +26,15 @@ div#listMenu {
 		text-align: center;
 }
 
+.fortuneHeader {
+		text-align: center;
+}
+
+div#randomFortune {
+		padding-left: 30%;
+		padding-right: 30%;
+}
+
+div.randomFortune > fortuneBig {
+		
+}

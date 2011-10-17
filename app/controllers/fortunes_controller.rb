@@ -10,6 +10,16 @@ class FortunesController < ApplicationController
     end
   end
 
+  def random
+    random_idx = rand(Fortune.count)
+
+    @fortune = Fortune.first(:offset => random_idx);
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   # GET /fortunes/1
   # GET /fortunes/1.json
   def show
