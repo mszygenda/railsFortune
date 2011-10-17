@@ -1,2 +1,6 @@
 var partial = "<%= escape_javascript render :partial => "comment", :locals => { :comment => @comment } %>";
-$("#comments_<%= @comment.fortune_id %> > div.commentsList").prepend(partial);
+var commentsDiv = $("#comments_<%= @comment.fortune_id %> > div.commentsList");
+commentsDiv.prepend(partial);
+var commentDiv = $("div.comment:first", commentsDiv);
+commentDiv.hide();
+commentDiv.fadeIn();
