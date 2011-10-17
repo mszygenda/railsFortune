@@ -5,3 +5,18 @@
  *= require_self
  *= require_tree . 
 */
+$appColor: #00A300;
+$appTextColor: white;
+
+
+div.appTitle {
+		color: $appTextColor;
+		background-color: $appColor;
+		font-size: 20pt;
+		border-radius: 5px;
+		border-width: 1px;
+		border-style: solid;
+		padding: 15px;
+		margin: 10px;
+}
+

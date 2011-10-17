@@ -1,0 +1,6 @@
+var partial = "<%= escape_javascript render :partial => 'fortune_big', :locals => { :fortune => @fortune } %>";
+var randomFortuneDiv = $('#randomFortune');
+randomFortuneDiv.html(partial);
+randomFortuneDiv.hide();
+randomFortuneDiv.fadeIn('fast');
+registerEventHandlers();
