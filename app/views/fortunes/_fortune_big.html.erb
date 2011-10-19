@@ -3,6 +3,10 @@
 		<%= fortune.content_short %>
 	</div>
 	<div class="fullContent">
+	  <div class="fortuneMenu">
+	    <%= link_to 'Edit', edit_fortune_path(fortune) %>
+	    <%= link_to 'Delete', fortune, :confirm => 'Are you sure?', method: :delete %>
+	  </div>
 		<%= simple_format fortune.content %>		
 
 		<p class="author">

@@ -1,23 +1,23 @@
 div.fortuneBig {
-		border-radius: 10px;
-		border-width: 1px;
-		border-style: solid;
-		padding: 10px;
-		margin: 10px;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    margin: 10px;
 }
 
 div.fullContent {
-		display: none;
-		max-width: 300px;
+    display: none;
+    max-width: 300px;
 }
 
 div.gridElement {
-		float: left;
+    float: left;
 }
 
 div.grid {
-		width: 100%;
-		float: left;
+    width: 100%;
+    float: left;
 }
 
 div#listMenu {
@@ -26,7 +26,7 @@ div#listMenu {
 }
 
 .fortuneHeader {
-		text-align: center;
+    text-align: center;
 }
 
 div#randomFortune {
@@ -36,4 +36,8 @@ div#randomFortune {
 
 div.randomFortune fullContent {
 
+}
+
+div.fortuneMenu {
+    float: right;
 }
