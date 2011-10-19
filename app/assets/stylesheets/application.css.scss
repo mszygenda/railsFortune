@@ -7,16 +7,32 @@
 */
 $appColor: #00A300;
 $appTextColor: white;
+$pagePadding: 15px;
 
+body {
+		background-color: lighten($appColor, 60%);
+}
+
+a:link, a:visited, a:hover {
+		color: darken($appColor, 20%) !important;
+}
 
 div.appTitle {
 		color: $appTextColor;
 		background-color: $appColor;
 		font-size: 20pt;
-		border-radius: 5px;
+		border-radius: 15px;
 		border-width: 1px;
 		border-style: solid;
-		padding: 15px;
+		padding: $pagePadding;
 		margin: 10px;
 }
 
+div[role=main] {
+		padding: $pagePadding;
+}
+
+footer {
+		padding: $pagePadding;
+		text-align: center;
+}
