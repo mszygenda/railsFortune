@@ -2,6 +2,10 @@ class FortunesController < ApplicationController
   # GET /fortunes
   # GET /fortunes.json
   def index
+    if Fortune.count == 0
+      render :action => 'nofortunes'
+      return
+    end
     @fortunes = Fortune.paginate :page => params[:page], :per_page => 4
 
     respond_to do |format|
@@ -10,13 +14,23 @@ class FortunesController < ApplicationController
     end
   end
 
-  def random
-    random_idx = rand(Fortune.count)
-
-    @fortune = Fortune.first(:offset => random_idx);
+  def nofortunes
     respond_to do |format|
       format.html
-      format.js
+    end
+  end
+
+  def random
+    if(Fortune.count == 0)
+      render :action => 'nofortunes'
+    else
+      random_idx = rand(Fortune.count)
+
+      @fortune = Fortune.first(:offset => random_idx);
+      respond_to do |format|
+        format.html
+        format.js
+      end
     end
   end
 

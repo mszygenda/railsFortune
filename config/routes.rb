@@ -5,6 +5,7 @@ RailsFortune::Application.routes.draw do
   resources :fortunes do
     collection do
       get :random
+      get :nofortunes
     end
   end
 
