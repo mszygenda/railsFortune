@@ -36,3 +36,9 @@ footer {
 		padding: $pagePadding;
 		text-align: center;
 }
+
+textarea, input {
+	 border-radius: 10px;
+	 background-color: lighten($appColor, 50%);
+	 padding: 5px;
+}
