@@ -1,4 +1,5 @@
 RailsFortune::Application.routes.draw do
+
   resources :comments
 
   resources :fortunes do
@@ -6,7 +7,8 @@ RailsFortune::Application.routes.draw do
       get :random
     end
   end
-  
+
+  root :to => 'fortunes#index'  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
