@@ -3,9 +3,9 @@ var listDiv = $("div#fortuneList");
 var fortunesHtml = "<%= escape_javascript render :partial => "fortune_list", :locals => { :fortunes => @fortunes } %>";
 var paginationHtml = "<%= escape_javascript paginate @fortunes, :remote => true %>";
 
-listDiv.hide("drop");
+listDiv.hide("drop", {}, 400);
 listDiv.html(fortunesHtml);
-listDiv.show("drop");
+listDiv.show("drop", {}, 400);
 
 paginationDiv.html(paginationHtml);
 
