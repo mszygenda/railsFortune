@@ -11,5 +11,10 @@ class Fortune < ActiveRecord::Base
       content
     end
   end
+  
+  def latest_comments
+    comments.order "created_at DESC"
+  end
+
 
 end
