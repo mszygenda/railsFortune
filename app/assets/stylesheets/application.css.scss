@@ -38,7 +38,7 @@ div.appTitle {
 		border-width: 1px;
 		border-style: solid;
 		border-color: $secondaryBack;
-		height: 150px;
+		height: 120px;
 }
 
 div#mainMenu {
@@ -57,9 +57,10 @@ div#mainMenu {
 }
 
 div[role=main] {
+		padding: 0px 10px 0px 10px;
 		margin-left: auto;
 		margin-right: auto;
-		padding: $pagePadding;
+		border-radius: 15px 15px 15px 15px;
 		width: 800px;
 		min-height: 500px;
 		background-color: $primaryBack;
@@ -82,4 +83,5 @@ footer {
 textarea {
 	 border-radius: 7px;
 	 padding: 7px;
+	 height: 150px;
 }
