@@ -17,7 +17,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-
+gem 'jqueryui_rails'
 gem 'kaminari'
 
 # Use unicorn as the web server

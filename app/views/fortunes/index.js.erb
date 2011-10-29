@@ -3,7 +3,10 @@ var listDiv = $("div#fortuneList");
 var fortunesHtml = "<%= escape_javascript render :partial => "fortune_list", :locals => { :fortunes => @fortunes } %>";
 var paginationHtml = "<%= escape_javascript paginate @fortunes, :remote => true %>";
 
+listDiv.hide("drop");
 listDiv.html(fortunesHtml);
+listDiv.show("drop");
+
 paginationDiv.html(paginationHtml);
 
 registerEventHandlers();
