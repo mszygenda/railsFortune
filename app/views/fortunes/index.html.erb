@@ -1,13 +1,10 @@
 <h1>Listing fortunes</h1>
 <div id="listMenu">
-	<%= paginate @fortunes, :remote => true %>
-</div>
-<div class="grid">
-	<% @fortunes.each do |fortune| %>
-	<div class="gridElement">
-		<%= render :partial => "fortune_big", :locals  => { :fortune => fortune }  %>
+	<div id="pagination">
+		<%= paginate @fortunes, :remote => true %>
 	</div>
-	<% end %>
-
+</div>
+<div class="grid" id="fortuneList">
+	<%= render :partial => "fortune_list", :locals => { :fortunes => @fortunes } %>
 	<br />
 </div>

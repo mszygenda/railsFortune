@@ -1,0 +1,10 @@
+var paginationDiv = $("div#pagination");
+var listDiv = $("div#fortuneList");
+var fortunesHtml = "<%= escape_javascript render :partial => "fortune_list", :locals => { :fortunes => @fortunes } %>";
+var paginationHtml = "<%= escape_javascript paginate @fortunes, :remote => true %>";
+
+listDiv.html(fortunesHtml);
+paginationDiv.html(paginationHtml);
+
+registerEventHandlers();
+window.randomColors();

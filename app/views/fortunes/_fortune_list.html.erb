@@ -1,0 +1,5 @@
+<% fortunes.each do |fortune| %>
+<div class="gridElement">
+	<%= render :partial => "fortune_big", :locals  => { :fortune => fortune }  %>
+</div>
+<% end %>
