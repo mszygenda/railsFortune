@@ -6,5 +6,5 @@ commentsListDiv.prepend(partial);
 
 var commentDiv = $("div.comment:first", commentsListDiv);
 commentDiv.hide();
-commentDiv.fadeIn();
+commentDiv.show("bounce", {}, 300);
 newCommentForm[0].reset();

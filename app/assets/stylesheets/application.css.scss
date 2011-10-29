@@ -35,10 +35,11 @@ div[role=main] {
 footer {
 		padding: $pagePadding;
 		text-align: center;
+		float: left;
+		width: 100%;
 }
 
-textarea, input {
+textarea {
 	 border-radius: 10px;
-	 background-color: lighten($appColor, 50%);
-	 padding: 5px;
+	 padding: 7px;
 }

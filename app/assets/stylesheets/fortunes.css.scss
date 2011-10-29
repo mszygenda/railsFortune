@@ -4,6 +4,7 @@ div.fortuneBig {
     border-style: solid;
     padding: 10px;
     margin: 10px;
+		width: 350px;
 }
 
 div.fullContent {
@@ -16,13 +17,21 @@ div.gridElement {
 }
 
 div.grid {
-    width: 100%;
-    float: left;
+    width: 800px;
+		height: 600px;
+		margin-left: auto;
+		margin-right: auto;
+		float: none;
+
 }
 
 div#listMenu {
-    float: left;
     text-align: center;
+}
+
+div#pagination {
+		width: 100%;
+		text-align: center;
 }
 
 .fortuneHeader {
@@ -40,4 +49,10 @@ div.randomFortune fullContent {
 
 div.fortuneMenu {
     float: right;
+}
+
+div.newComment {
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
 }

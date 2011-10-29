@@ -1,18 +1,14 @@
 <div class="fortuneBig">
-	<div class="shortContent">
-		<%= fortune.content_short %>
+	<div class="fortuneMenu">
+	  <%= link_to 'Edit', edit_fortune_path(fortune) %>
+	  <%= link_to 'Delete', fortune, :confirm => 'Are you sure?', method: :delete %>
 	</div>
+	<%= simple_format fortune.content %>		
+
+	<p class="author">
+		<%= fortune.author %>
+	</p>
 	<div class="fullContent">
-	  <div class="fortuneMenu">
-	    <%= link_to 'Edit', edit_fortune_path(fortune) %>
-	    <%= link_to 'Delete', fortune, :confirm => 'Are you sure?', method: :delete %>
-	  </div>
-		<%= simple_format fortune.content %>		
-
-		<p class="author">
-			<%= fortune.author %>
-		</p>
-
 		<div id="comments_<%= fortune.id %>">
 			<h2>Add new comment</h2>
 			<div class="newComment">
