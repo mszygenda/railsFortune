@@ -6,10 +6,10 @@ class FortunesController < ApplicationController
       render :action => 'nofortunes'
       return
     end
-    @fortunes = Fortune.paginate :page => params[:page], :per_page => 4
-
+    @fortunes = Fortune.page params[:page]
     respond_to do |format|
       format.html # index.html.erb
+      format.js
       format.json { render json: @fortunes }
     end
   end

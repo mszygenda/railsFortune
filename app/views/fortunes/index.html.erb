@@ -1,6 +1,6 @@
 <h1>Listing fortunes</h1>
 <div id="listMenu">
-	<%= will_paginate @fortunes %>
+	<%= paginate @fortunes, :remote => true %>
 </div>
 <div class="grid">
 	<% @fortunes.each do |fortune| %>

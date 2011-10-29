@@ -1,5 +1,6 @@
 class Fortune < ActiveRecord::Base
   has_many :comments
+  paginates_per 4
 
   SummaryLength = 75
 
