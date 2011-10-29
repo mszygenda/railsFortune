@@ -53,6 +53,11 @@ div.fortuneMenu {
 
 div.newComment {
 		width: 100%;
-		margin-left: auto;
-		margin-right: auto;
+		textarea {
+				margin-left: auto;
+				margin-right: auto;
+
+				width: 335px;
+		}
 }
+
