@@ -35,11 +35,10 @@ class CommentsController < ApplicationController
   # POST /comments.json
   def create
     @comment = Comment.new(params[:comment])
+    @comment.save
 
     respond_to do |format|
-      if @comment.save
-        format.js
-      end
+      format.js
     end
   end
 

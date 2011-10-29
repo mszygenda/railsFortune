@@ -2,9 +2,25 @@ var partial = "<%= escape_javascript render :partial => "comment", :locals => { 
 var commentsDiv = $("#comments_<%= @comment.fortune_id %>");
 var commentsListDiv = $("div.commentsList", commentsDiv);
 var newCommentForm = $("div.newComment > form", commentsDiv);
-commentsListDiv.prepend(partial);
+var newCommentDiv = $("div.newComment", commentsDiv);
 
-var commentDiv = $("div.comment:first", commentsListDiv);
-commentDiv.hide();
-commentDiv.show("bounce", {}, 300);
-newCommentForm[0].reset();
+
+<% if @comment.valid?  %>
+	 commentsListDiv.prepend(partial);
+	 var commentDiv = $("div.comment:first", commentsListDiv);
+	 commentDiv.hide();
+	 commentDiv.show("bounce", {}, 300);
+	 newCommentForm[0].reset();
+
+	 var newCommentPartial = "<%= escape_javascript render :partial => "form", :locals => { :comment => @comment.fortune.comments.new  } %>";	
+
+<% else %>
+
+	 var newCommentPartial = "<%= escape_javascript render :partial => "form", :locals => { :comment => @comment } %>";	
+<% end %>
+newCommentDiv.html(newCommentPartial);
+
+<% if !@comment.valid? %>
+	 newCommentDiv.hide();
+	 newCommentDiv.show("bounce", {}, 300);
+<% end %>
