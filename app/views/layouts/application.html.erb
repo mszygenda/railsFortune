@@ -40,25 +40,25 @@
   <header>
   </header>
   <div role="main">
-		<div class="appTitle">
-			railsFortune app
-			<div id="mainMenu">
-				<%= link_to "List", { :controller => 'fortunes' } %>
-	      <%= link_to "Random fortune", { :controller => 'fortunes', :action => 'random' } %>
-				<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
-</div>
-		</div>
+    <div class="appTitle">
+      railsFortune app
+      <div id="mainMenu">
+	<%= link_to "List", { :controller => 'fortunes' } %>
+        <%= link_to "Random fortune", { :controller => 'fortunes', :action => 'random' } %>
+	<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
+      </div>
+    </div>
 
-<div id="content">
-  <div id="ajaxLoading">Loading, please wait...</div>
-	<%= yield %>
-</div>
+    <div id="content">
+      <div id="infoBar">
+	<div id="ajaxLoading">Loading, please wait...</div>
+      </div>
+      <%= yield %>
+    </div>
   </div>
   <footer>
-		railsFortune 2011
+    railsFortune 2011
   </footer>
-
-
   <!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6.
        chromium.org/developers/how-tos/chrome-frame-getting-started -->
   <!--[if lt IE 7 ]>
