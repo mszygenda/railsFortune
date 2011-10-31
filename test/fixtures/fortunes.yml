@@ -1,9 +1,25 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
 
-one:
-  content: MyText
-  author: MyString
+philips:
+  content: "A computer once beat me at chess, but it was no match for me at kick boxing."
+  author: "Emo Philips"
 
-two:
-  content: MyText
-  author: MyString
+parnas:
+  content: "As a rule, software systems do not work well until they have been used, and have failed repeatedly, in real applications."
+  author: "Dave Parnas"
+
+ritchie:
+  content: "UNIX is basically a simple operating system, but you have to be a genius to understand the simplicity."
+  author: "Dennis Ritchie"
+
+ken: 
+  content: "I think the major good idea in Unix was its clean and simple interface: open, close, read, and write."
+  author: "Ken Thompson"
+
+linus:
+  content: How should I know if it works? That's what beta testers are for. I only coded it.
+  author: "Linus Torvalds"
+
+anonymous:
+  content: "Unix is user-friendly. It's just very selective about who its friends are."
+  author: "anonymous"
