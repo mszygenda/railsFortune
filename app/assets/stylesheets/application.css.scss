@@ -4,7 +4,7 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree . 
-*/
+ */
 $secondaryBack: white;
 $primaryBack: #BBFA5D;
 $secondaryTextColor: #00A300; 
@@ -13,75 +13,84 @@ $pagePadding: 15px;
 $linkColor: #76EE23;
 
 body {
-background: #a4b357; /* Old browsers */
-background: -moz-linear-gradient(top, #a4b357 0%, #75890c 80%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a4b357), color-stop(80%,#75890c)); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, #a4b357 0%,#75890c 80%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, #a4b357 0%,#75890c 80%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, #a4b357 0%,#75890c 80%); /* IE10+ */
-background: linear-gradient(top, #a4b357 0%,#75890c 80%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
-		color: $primaryTextColor;
+    background: #a4b357; /* Old browsers */
+    background: -moz-linear-gradient(top, #a4b357 0%, #75890c 80%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a4b357), color-stop(80%,#75890c)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #a4b357 0%,#75890c 80%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #a4b357 0%,#75890c 80%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #a4b357 0%,#75890c 80%); /* IE10+ */
+    background: linear-gradient(top, #a4b357 0%,#75890c 80%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a4b357', endColorstr='#75890c',GradientType=0 ); /* IE6-9 */
+    color: $primaryTextColor;
 }
 
 a:link, a:visited, a:hover {
-		color: $linkColor !important;
+    color: $linkColor !important;
 }
 
 div.appTitle {
-		vertical-align: middle;
-		color: $secondaryTextColor;
-		background-color: $secondaryBack;
-		font-size: 30pt;
-		border-radius: 15px 15px 0px 0px;
-		border-width: 1px;
-		border-style: solid;
-		border-color: $secondaryBack;
-		height: 120px;
+    vertical-align: middle;
+    color: $secondaryTextColor;
+    background-color: $secondaryBack;
+    font-size: 30pt;
+    border-radius: 15px 15px 0px 0px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $secondaryBack;
+    height: 120px;
 }
 
 div#mainMenu {
-		float: right;
-		font-size: 25pt;
-		padding: 20px;
-		vertical-align: bottom;
-		a {
-				font-size: 18pt;
-				display: block;
-				text-decoration: none;
-		}
-		a:before {
-				content: ">> ";
-		}
+    float: right;
+    font-size: 25pt;
+    padding: 20px;
+    vertical-align: bottom;
+    a {
+	font-size: 18pt;
+	display: block;
+	text-decoration: none;
+    }
+    a:before {
+	content: ">> ";
+    }
 }
 
 div[role=main] {
-		padding: 0px 10px 0px 10px;
-		margin-left: auto;
-		margin-right: auto;
-		border-radius: 15px 15px 15px 15px;
-		width: 800px;
-		min-height: 500px;
-		background-color: $primaryBack;
-		color: $primaryTextColor;
+    padding: 0px 10px 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px 15px 15px 15px;
+    width: 800px;
+    min-height: 500px;
+    background-color: $primaryBack;
+    color: $primaryTextColor;
 }
 
 div#content {
-		a:link, a:visited, a:hover {
-				color: darken($linkColor,30%) !important;
-		}
+    a:link, a:visited, a:hover {
+	color: darken($linkColor,30%) !important;
+    }
 }
 
 footer {
-		padding: $pagePadding;
-		text-align: center;
-		float: left;
-		width: 100%;
+    padding: $pagePadding;
+    text-align: center;
+    float: left;
+    width: 100%;
 }
 
 textarea {
-	 border-radius: 7px;
-	 padding: 7px;
-	 height: 150px;
+    border-radius: 7px;
+    padding: 7px;
+    height: 150px;
 }
+
+#ajaxLoading {
+    display: none;
+    background: url('ajax-loader.gif') top left no-repeat;
+    padding-left: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+} 
