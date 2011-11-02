@@ -1,5 +1,6 @@
 RailsFortune::Application.routes.draw do
 
+  match 'auth/:provider/callback' => 'session#create'
   resources :comments
 
   resources :fortunes do

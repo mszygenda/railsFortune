@@ -19,6 +19,8 @@ end
 gem 'jquery-rails'
 gem 'jqueryui_rails'
 gem 'kaminari'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 # Use unicorn as the web server
 # gem 'unicorn'
