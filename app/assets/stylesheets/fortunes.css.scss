@@ -1,10 +1,14 @@
 div.fortuneBig {
-    border-radius: 10px;
+    width: 350px;
+
+		border-radius: 10px;
     border-width: 1px;
     border-style: solid;
+
     padding: 10px;
-    margin: 10px;
-		width: 350px;
+    margin-left: auto;
+		margin-right: auto;
+
 }
 
 div.fullContent {
@@ -14,11 +18,12 @@ div.fullContent {
 
 div.gridElement {
     float: left;
+		padding: 10px;
 }
 
 div.grid {
-    width: 800px;
-		height: 600px;
+    width: 784px;
+		min-height: 600px;
 		margin-left: auto;
 		margin-right: auto;
 		float: none;
@@ -38,9 +43,11 @@ div#pagination {
     text-align: center;
 }
 
-div#randomFortune {
-    padding-left: 30%;
-    padding-right: 30%;
+div.centralFortune {
+		width: 100%;
+		fortuneBig {
+				width: 350px;
+		}
 }
 
 div.randomFortune fullContent {

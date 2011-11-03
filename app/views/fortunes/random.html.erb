@@ -1,6 +1,6 @@
 <h1 class="fortuneHeader">
 <%= link_to 'Get another one', { :action => :random }, :remote => true %>
 </h1>
-<div id="randomFortune">
+<div class="centralFortune" id="randomFortune">
 	<%= render :partial => "fortune_big", :locals => { :fortune => @fortune } %>
 </div>
