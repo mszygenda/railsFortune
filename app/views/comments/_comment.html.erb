@@ -1,9 +1,13 @@
-<div class="comment">
-<p>
-  <%= comment.content %>
-</p>
 
-<p class="author">
-  <%= comment.author %>
-</p>
+<div class="comment">
+	<div class="comment_vote" id="comment_vote_<%= comment.id %>">
+		<%= render :partial => 'comments/comment_vote', :locals => { :comment => comment } %>
+	</div>
+	<p>
+		<%= comment.content %>
+	</p>
+
+	<p class="author">
+		<%= comment.author %>
+	</p>
 </div>

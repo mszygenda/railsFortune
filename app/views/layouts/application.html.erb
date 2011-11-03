@@ -47,6 +47,9 @@
         <%= link_to "Random fortune", { :controller => 'fortunes', :action => 'random' } %>
 	<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
       </div>
+    <% if current_user %>
+		<%= current_user.name %>
+		<% end %>
     </div>
 
     <div id="content">

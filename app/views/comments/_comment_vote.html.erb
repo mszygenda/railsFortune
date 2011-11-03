@@ -1,0 +1,1 @@
+[ <%= comment.plusminus %> ] <%= link_to '+', vote_comments_path(:id => comment.id, :plus => 1), :remote => true %> <%= link_to '-', vote_comments_path(:id => comment.id, :plus => 0), :remote => true %>

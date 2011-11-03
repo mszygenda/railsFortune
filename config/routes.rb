@@ -1,7 +1,12 @@
 RailsFortune::Application.routes.draw do
 
   match 'auth/:provider/callback' => 'session#create'
-  resources :comments
+
+  resources :comments do
+    collection do
+      get :vote
+    end
+  end
 
   resources :fortunes do
     collection do

@@ -6,7 +6,25 @@ form.new_comment textarea {
 		witdh: 300px;
 }
 
+div.commentsList {
+		width: 300px;
+		margin-left: auto;
+		margin-right: auto;
+}
+
+div.comment {
+
+}
+
 div.comment > p.author {
     text-align: right;
     font-style: italic;
+}
+
+div.comment_vote {
+		float: right;
+		font-weight: bold;
+		a:link, a:visited, a:hover {
+				text-decoration: none;
+		}
 }

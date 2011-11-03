@@ -1,4 +1,21 @@
 class CommentsController < ApplicationController
+  def vote
+    @comment = Comment.find_by_id params[:id]
+    @user = current_user
+    @already_voted = !@user.nil? ? @user.voted_on?(@comment) : false
+
+    if(!@user.nil? && !@already_voted) 
+      if params[:plus].to_i == 1
+        @user.vote_for @comment
+      else
+        @user.vote_against @comment
+      end
+      respond_to do |format|
+        format.js
+      end
+    end
+  end
+
   # GET /comments
   # GET /comments.json
   def index

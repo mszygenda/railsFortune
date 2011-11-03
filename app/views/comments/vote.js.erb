@@ -1,0 +1,13 @@
+<% if @user.nil? %>
+	 alert("You need to be logged in");
+<% elsif @already_voted %>
+	 alert("You have already voted for this comment");
+<% else %>
+
+var voteMenu = $("div#comment_vote_<%= @comment.id %>");
+var voteMenuHtml = "<%= escape_javascript render :partial => 'comments/comment_vote', :locals => { :comment => @comment } %>";
+
+voteMenu.html(voteMenuHtml);
+voteMenu.show('pulsate', {}, 300);
+
+<% end %>
