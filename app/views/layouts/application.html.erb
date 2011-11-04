@@ -47,9 +47,13 @@
         <%= link_to "Random fortune", { :controller => 'fortunes', :action => 'random' } %>
 	<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
       </div>
+    <p class="auth">
     <% if current_user %>
-		<%= current_user.name %>
+		You are logged in as <%= current_user.name %>
+		<% else %>
+		You are not signed in. Do you want to <%= link_to 'sign in', 'auth/github' %> using github?
 		<% end %>
+		</p>
     </div>
 
     <div id="content">

@@ -20,6 +20,7 @@ gem 'jquery-rails'
 gem 'jqueryui_rails'
 gem 'kaminari'
 gem 'omniauth'
+gem 'omniauth-github'
 gem 'thumbs_up'
 
 # Use unicorn as the web server
