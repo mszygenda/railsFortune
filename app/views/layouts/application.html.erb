@@ -49,7 +49,8 @@
       </div>
     <p class="auth">
     <% if current_user %>
-		You are logged in as <%= current_user.name %>
+		You are logged in as <%= current_user.name %>. 
+                <%= link_to 'Sign out', 'signout' %>
 		<% else %>
 		You are not signed in. Do you want to <%= link_to 'sign in', 'auth/github' %> using github?
 		<% end %>
