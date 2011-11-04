@@ -14,11 +14,13 @@
   <div class="field">
     <%= f.text_area :content %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-	<%= f.hidden_field :fortune_id %>
+  <% if current_user.nil? %>
+    <div class="field">
+      <%= f.label :author %><br />
+      <%= f.text_field :author %>
+    </div>
+  <% end %>
+  <%= f.hidden_field :fortune_id %>
   <div class="actions">
     <%= f.submit %>
   </div>
