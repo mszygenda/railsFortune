@@ -1,5 +1,5 @@
 class Fortune < ActiveRecord::Base
-  has_many :comments
+  has_many :comments, :dependent => :destroy
   paginates_per 4
 
   SummaryLength = 75
