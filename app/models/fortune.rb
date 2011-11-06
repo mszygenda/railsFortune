@@ -1,5 +1,7 @@
 class Fortune < ActiveRecord::Base
   has_many :comments, :dependent => :destroy
+  validates :content, :presence => true, :length => { :minimum => 3 }
+  validates :author, :presence => true, :length => { :minimum => 3 }
   paginates_per 4
 
   SummaryLength = 75
