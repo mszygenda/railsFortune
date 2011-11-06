@@ -38,8 +38,6 @@
 
 <body>
   <header>
-  </header>
-  <div role="main">
     <div class="appTitle">
       railsFortune app
       <div id="mainMenu">
@@ -47,6 +45,7 @@
         <%= link_to "Random fortune", { :controller => 'fortunes', :action => 'random' } %>
 	<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
       </div>
+
     <p class="auth">
     <% if current_user %>
 		You are logged in as <%= current_user.name %>. 
@@ -56,7 +55,8 @@
 		<% end %>
 		</p>
     </div>
-
+  </header>
+  <div role="main">
     <div id="content">
       <div id="infoBar">
 	<div id="ajaxLoading">Loading, please wait...</div>
