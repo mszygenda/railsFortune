@@ -29,17 +29,28 @@ a:link, a:visited, a:hover {
     color: $linkColor !important;
 }
 
-div.appTitle {
-    vertical-align: middle;
-    color: $secondaryTextColor;
-    background-color: $secondaryBack;
-    font-size: 30pt;
+header {
+    width: 800px;
+    padding: 0px 10px 0px 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $primaryBack;
+
     border-radius: 15px 15px 0px 0px;
     border-width: 1px;
-    border-style: solid;
-    border-color: $secondaryBack;
-    height: 120px;
+
+    div.appTitle {
+	height: 120px;
+	color: $secondaryTextColor;
+	background-color: $secondaryBack;
+	font-size: 30pt;
+	border-radius: 15px 15px 0px 0px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: $secondaryBack;
+    }
 }
+
 
 div#mainMenu {
     float: right;
@@ -60,7 +71,7 @@ div[role=main] {
     padding: 0px 10px 0px 10px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 15px 15px 15px 15px;
+    border-radius: 0px 0px 15px 15px;
     width: 800px;
     min-height: 500px;
     background-color: $primaryBack;

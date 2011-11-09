@@ -4,7 +4,9 @@ class User < ActiveRecord::Base
   def self.create_with_omniauth auth
     create! do |user|
       user.uid = auth[:uid]
-      user.name = auth[:first_name] #auth[:user_info][:name] 
+      if(!auth[:info].nil?)
+        user.name = auth[:info][:name] #auth[:user_info][:name] 
+      end
       user.provider = auth[:provider]
     end
   end

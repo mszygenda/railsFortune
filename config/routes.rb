@@ -1,6 +1,8 @@
 RailsFortune::Application.routes.draw do
 
+  match 'auth/failure' => 'session#failure'
   match 'auth/:provider/callback' => 'session#create'
+  match 'signout' => 'session#destroy'
 
   resources :comments do
     collection do

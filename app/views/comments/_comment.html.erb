@@ -8,6 +8,10 @@
 	</p>
 
 	<p class="author">
-		<%= comment.author %>
+	  <% if comment.user %>
+	    <%= comment.user.name %>
+	  <% else %>
+            <%= comment.author %>
+          <% end %>
 	</p>
 </div>

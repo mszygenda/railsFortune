@@ -8,10 +8,6 @@
 <head>
   <meta charset="utf-8">
 
-  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
-       More info: h5bp.com/b/378 -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
   <title>railsFortune App</title>
   <meta name="description" content="Sample rails app">
   <meta name="author" content="Mateusz Szygenda">
@@ -38,8 +34,6 @@
 
 <body>
   <header>
-  </header>
-  <div role="main">
     <div class="appTitle">
       railsFortune app
       <div id="mainMenu">
@@ -48,15 +42,18 @@
 	<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
 	<%= link_to "Falling fortunes", falling_fortunes_url %>
       </div>
+
     <p class="auth">
     <% if current_user %>
-		You are logged in as <%= current_user.name %>
+		You are logged in as <%= current_user.name %>. 
+                <%= link_to 'Sign out', '/signout' %>
 		<% else %>
-		You are not signed in. Do you want to <%= link_to 'sign in', 'auth/github' %> using github?
+		You are not signed in. Do you want to <%= link_to 'sign in', '/auth/github' %> using github?
 		<% end %>
 		</p>
     </div>
-
+  </header>
+  <div role="main">
     <div id="content">
       <div id="infoBar">
 	<div id="ajaxLoading">Loading, please wait...</div>

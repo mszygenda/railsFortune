@@ -1,4 +1,4 @@
-<%= form_for(comment, :remote => true) do |f| %>
+<%= form_for(comment, :remote => true, :html => { :id => unique_field_id(comment, :new_comment) }) do |f| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
@@ -12,13 +12,15 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_area :content %>
+    <%= f.text_area :content,{ :id => unique_field_id(comment, :content) } %>
   </div>
-  <div class="field">
-    <%= f.label :author %><br />
-    <%= f.text_field :author %>
-  </div>
-	<%= f.hidden_field :fortune_id %>
+  <% if current_user.nil? %>
+    <div class="field">
+      <%= f.label :author, { :for => unique_field_id(comment, :author) } %><br />
+      <%= f.text_field :author, { :id => unique_field_id(comment, :author) } %>
+    </div>
+  <% end %>
+  <%= f.hidden_field :fortune_id, { :id => unique_field_id(comment, :fortune_id) } %>
   <div class="actions">
     <%= f.submit %>
   </div>
