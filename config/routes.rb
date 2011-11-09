@@ -10,7 +10,9 @@ RailsFortune::Application.routes.draw do
 
   resources :fortunes do
     collection do
+      get :falling
       get :random
+      get :random_fortunes
       get :nofortunes
     end
   end

@@ -46,6 +46,7 @@
 	<%= link_to "List", { :controller => 'fortunes' } %>
         <%= link_to "Random fortune", { :controller => 'fortunes', :action => 'random' } %>
 	<%= link_to "New fortune", { :controller => 'fortunes', :action => 'new' } %>
+	<%= link_to "Falling fortunes", falling_fortunes_url %>
       </div>
     <p class="auth">
     <% if current_user %>

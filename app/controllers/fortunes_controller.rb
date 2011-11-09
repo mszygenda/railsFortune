@@ -20,6 +20,14 @@ class FortunesController < ApplicationController
     end
   end
 
+  def random_fortunes
+    random_idx = rand(Fortune.count)
+    @fortunes = Fortune.offset(random_idx).limit(4)
+    respond_to do |format|
+      format.json { render json: @fortunes }
+    end
+  end
+
   def random
     if(Fortune.count == 0)
       render :action => 'nofortunes'
@@ -33,6 +41,14 @@ class FortunesController < ApplicationController
       end
     end
   end
+
+  def falling
+
+    respond_to do |format|
+      format.html
+    end
+  end
+
 
   # GET /fortunes/1
   # GET /fortunes/1.json
