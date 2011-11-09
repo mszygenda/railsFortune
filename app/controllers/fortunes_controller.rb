@@ -1,5 +1,5 @@
 class FortunesController < ApplicationController
-  before_filter :authenticate, :except => [ :random, :index, :nofortunes, :show ]
+  before_filter :authenticate, :except => [ :random, :index, :nofortunes, :show, :random_fortunes, :falling ]
 
   # GET /fortunes
   # GET /fortunes.json
