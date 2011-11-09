@@ -99,6 +99,13 @@ div.fallingFortune {
 		div.content {
 				display: none;
 				font-style: italic;
+				padding: 0px 5px 0px 5px;
+
+				div.text {
+						height: 50px;
+						overflow: hidden;
+						float: left;
+				}
 		}
 		div.content:after {
 				content: '...';
