@@ -3,9 +3,10 @@ function createFortuneDiv(fortune) {
 		template.removeAttr('id');
 
 		var html = template.html();
-
+		var pattern = '';
 		for(prop in fortune) {
-				html = html.replace('${' + prop + '}', eval("fortune." + prop));
+				pattern = "\\$\\{" + prop + "\\}";
+				html = html.replace(new RegExp(pattern, 'g'), eval("fortune." + prop));
 		}
 
 		template.html(html);
@@ -22,13 +23,23 @@ function fallingFortune_mouseOver() {
 		$(this).css('z-index', '101');
 		$(this).stop();
 		var contentDiv = $('div.content', $(this));
-		contentDiv.show('slide', {}, 500);
+		var comicBalloon = $('div.comicBalloon', $(this));
+
+		var balloonPosition = {
+				top: $(this).position().top - comicBalloon.height(),
+				left: $(this).position().left - comicBalloon.width() + 30
+		}
+
+		comicBalloon.offset(balloonPosition);
+		comicBalloon.show('fade', {}, 500);
 }
 
 function fallingFortune_mouseOut() {
 		animateFallingDiv($(this), true);
 		var contentDiv = $('div.content', $(this));
-		contentDiv.hide('slide', {}, 500);
+		var comicBalloon = $('div.comicBalloon', $(this));
+
+		comicBalloon.hide('fade', {}, 500);
 }
 
 function fallingFortune_clicked() {
@@ -47,7 +58,7 @@ function animateFallingDiv(fortuneDiv, continueOnly) {
 		if(!continueOnly) {
 				var startPosition = {
 						top: fallingArea.offset().top,
-						left: fallingArea.offset().left + Math.random() * (fallingArea.width() - fortuneDiv.width() )
+						left: fallingArea.offset().left + parseInt(Math.random() * (fallingArea.width() - fortuneDiv.width()) )
 				};
 		}
 		else
