@@ -1,16 +1,19 @@
 function createFortuneDiv(fortune) {
-		var template = $("div#fallingFortuneTemplate").clone();
-		template.removeAttr('id');
+		var template = $("div#fallingFortuneTemplate");
+		var fortuneDiv = template.clone();
+		fortuneDiv.removeAttr('id');
+		fortuneDiv.width(template.width());
+		fortuneDiv.height(template.height());
 
-		var html = template.html();
+		var html = fortuneDiv.html();
 		var pattern = '';
 		for(prop in fortune) {
 				pattern = "\\$\\{" + prop + "\\}";
 				html = html.replace(new RegExp(pattern, 'g'), eval("fortune." + prop));
 		}
 
-		template.html(html);
-		return template;
+		fortuneDiv.html(html);
+		return fortuneDiv;
 }
 
 function animationSuccess() {
@@ -53,34 +56,38 @@ function connectEventHandlers(fortuneDiv) {
 }
 
 function animateFallingDiv(fortuneDiv, continueOnly) {
-		var fallingArea = $("div#fallingArea");
 		continueOnly = (typeof(continueOnly) != 'undefined') ? continueOnly : false;
-		if(!continueOnly) {
-				var startPosition = {
-						top: fallingArea.offset().top,
-						left: fallingArea.offset().left + parseInt(Math.random() * (fallingArea.width() - fortuneDiv.width()) )
-				};
-		}
-		else
-		{
-				var startPosition = fortuneDiv.offset();
-		}
 
-		var fallingSpeed = fallingArea.height() * 10 + Math.random() * 20000 + 10000;
-		var distance = startPosition.top + fallingArea.height() - fortuneDiv.height();
+		var fallingArea = $("div#fallingArea");
+
+		var topPosition = {
+				top: fallingArea.offset().top,
+				left: fallingArea.offset().left + parseInt(Math.random() * (fallingArea.width() - fortuneDiv.width()) )
+		};
+		var startPosition = continueOnly ? fortuneDiv.offset() : topPosition;
+		var endPosition = {
+				top: topPosition.top + fallingArea.height() - fortuneDiv.height(),
+				left: startPosition.left
+		};
+
+		var distance = endPosition.top - startPosition.top;
+		var fallingSpeed = distance * 25 + Math.random() * distance * 25;
 
 		fortuneDiv.offset(startPosition);
 		fortuneDiv.css('z-index', Math.random() * 100);
 
 		var properties = {
-				top: distance,
+				top: endPosition.top,
 		};
 
 		connectEventHandlers(fortuneDiv);
 		fallingArea.append(fortuneDiv);
+
+		// If it's new animation randomize show up time
 		if(!continueOnly) {
 				fortuneDiv.delay(Math.random()*2000 + 1000).show('fade', {}, 400);
 		}
+
 		fortuneDiv.animate(properties, fallingSpeed, 'linear', animationSuccess);
 }
 
