@@ -1,9 +1,16 @@
+function randomColor() {
+		colors = ["#66CC33", "#CCFF00", "#33CC00", "#66FF00", "#99FF66","#33FF00", "#CCFF66", "#99CC00"];
+		var index = parseInt ( (colors.length - 1) * Math.random() );
+		return colors[index];
+}
+
 function createFortuneDiv(fortune) {
 		var template = $("div#fallingFortuneTemplate");
 		var fortuneDiv = template.clone();
 		fortuneDiv.removeAttr('id');
 		fortuneDiv.width(template.width());
 		fortuneDiv.height(template.height());
+		fortuneDiv.css('background-color', randomColor());
 
 		var html = fortuneDiv.html();
 		var pattern = '';
