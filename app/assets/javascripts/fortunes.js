@@ -47,7 +47,7 @@ function scrollUpAndDown(comicDiv) {
 		}
 }
 
-function fallingFortune_mouseOver() {
+function fallingFortune_mouseEnter() {
 		$(this).css('z-index', '101');
 		$(this).stop();
 		var contentDiv = $('div.content', $(this));
@@ -65,7 +65,7 @@ function fallingFortune_mouseOver() {
 		}, 2000);
 }
 
-function fallingFortune_mouseOut() {
+function fallingFortune_mouseLeave() {
 		animateFallingDiv($(this), true);
 		var contentDiv = $('div.content', $(this));
 		var comicBalloon = $('div.comicBalloon', $(this));
@@ -81,7 +81,8 @@ function fallingFortune_clicked() {
 }
 
 function connectEventHandlers(fortuneDiv) {
-		fortuneDiv.hover(fallingFortune_mouseOver, fallingFortune_mouseOut);
+		fortuneDiv.mouseenter(fallingFortune_mouseEnter);
+		fortuneDiv.mouseleave(fallingFortune_mouseLeave);
 		fortuneDiv.click(fallingFortune_clicked);
 }
 
