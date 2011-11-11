@@ -70,7 +70,7 @@ function fallingFortune_mouseOut() {
 		var contentDiv = $('div.content', $(this));
 		var comicBalloon = $('div.comicBalloon', $(this));
 		var comicContent = $('p.text', comicBalloon);
-		comicContent.autoscrol("destroy");
+		comicContent.autoscroll("destroy");
 
 		comicBalloon.hide('fade', {}, 500);
 }
