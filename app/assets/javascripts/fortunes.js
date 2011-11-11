@@ -32,18 +32,17 @@ function animationSuccess() {
 function scrollUpAndDown(comicDiv) {
 		if(comicDiv.is(":visible")) {
 				var content = $("p.text", comicDiv);
-				var step = 20;
+				var step = 12;
 				var settings = { 
-						direction: "down",
+						direction: "up",
 						step: step,
 						onEdge: function () {
-								content.autoscroll("reverse");
+								setTimeout(function() { 
+										content.autoscroll("reverse"); 
+								}, 2000);
 						}
 				};
 				content.autoscroll(settings);
-				setInterval(function() {
-						content.autoscroll("toggle");
-				}, 2000);
 		}
 }
 
@@ -60,9 +59,7 @@ function fallingFortune_mouseEnter() {
 
 		comicBalloon.offset(balloonPosition);
 		comicBalloon.show('fade', {}, 500);
-		setTimeout(function() { 
-				scrollUpAndDown(comicBalloon)
-		}, 2000);
+		scrollUpAndDown(comicBalloon);
 }
 
 function fallingFortune_mouseLeave() {
