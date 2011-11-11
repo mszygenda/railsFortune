@@ -29,6 +29,24 @@ function animationSuccess() {
 		setTimeout(fortuneDiv.remove, 400);
 }
 
+function scrollUpAndDown(comicDiv) {
+		if(comicDiv.is(":visible")) {
+				var content = $("p.text", comicDiv);
+				var step = 20;
+				var settings = { 
+						direction: "down",
+						step: step,
+						onEdge: function () {
+								content.autoscroll("reverse");
+						}
+				};
+				content.autoscroll(settings);
+				setInterval(function() {
+						content.autoscroll("toggle");
+				}, 2000);
+		}
+}
+
 function fallingFortune_mouseOver() {
 		$(this).css('z-index', '101');
 		$(this).stop();
@@ -42,12 +60,17 @@ function fallingFortune_mouseOver() {
 
 		comicBalloon.offset(balloonPosition);
 		comicBalloon.show('fade', {}, 500);
+		setTimeout(function() { 
+				scrollUpAndDown(comicBalloon)
+		}, 2000);
 }
 
 function fallingFortune_mouseOut() {
 		animateFallingDiv($(this), true);
 		var contentDiv = $('div.content', $(this));
 		var comicBalloon = $('div.comicBalloon', $(this));
+		var comicContent = $('p.text', comicBalloon);
+		comicContent.autoscrol("destroy");
 
 		comicBalloon.hide('fade', {}, 500);
 }
