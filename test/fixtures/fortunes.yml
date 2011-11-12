@@ -23,3 +23,32 @@ linus:
 anonymous:
   content: "Unix is user-friendly. It's just very selective about who its friends are."
   author: "anonymous"
+
+einstein:
+  content: "It would be possible to describe everything scientifically, but it would make no sense; it would be without meaning, as if you described a Beethoven symphony as a variation of wave pressure."
+  author: "Albert Einstein"
+
+curie:
+  content: "After all, science is essentially international, and it is only through lack of the historical sense that national qualities have been attributed to it."
+  author: "Maria Skłodowska Curie"
+
+jamie:
+  content: "I think Linux is a great thing, because Linux is an alternative to Windows, and because, of all the operating systems that are at all relevant today, Unix is the best of a bad lot."
+  author: "Jamie Zawinski"
+
+
+joy:
+  content: "I got tired of people complaining that it was too hard to use UNIX because the editor was too complicated."
+  author: "Bill Joy"
+
+allman:
+  content: "Unix gives you just enough rope to hang yourself -- and then a couple of more feet, just to be sure."
+  author: "Eric Allman"
+
+marcus:
+  content: "If the designers of X Windows built cars, there would be no fewer than five steering wheels hidden about the cockpit, none of which followed the same principles – but you’d be able to shift gears with your car stereo. Useful feature that."
+  author: "Marcus J. Ranum"
+
+gwyn:
+  content: "UNIX was not designed to stop its users from doing stupid things, as that would also stop them from doing clever things."
+  author: "Doug Gwyn"
