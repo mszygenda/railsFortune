@@ -93,28 +93,15 @@ div.fallingFortune {
     border-width: 1px;
     border-style: solid;
 
-		width: 100px;
+		min-width: 100px;
 		height: 20px;
-
-		vertical-align: middle;
+		padding: 0px 5px 0px 5px;
 
 		text-align: center;
 		
 		display: none;
-		div.content {
-				display: none;
-				font-style: italic;
-				padding: 0px 5px 0px 5px;
+		vertical-align: middle;				
 
-				p.text {
-						height: 50px;
-						overflow: hidden;
-						float: left;
-				}
-		}
-		div.content:after {
-				content: '...';
-		}
 		div.fortuneId {
 				display: none;
 		}

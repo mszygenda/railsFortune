@@ -8,8 +8,6 @@ function createFortuneDiv(fortune) {
 		var template = $("div#fallingFortuneTemplate");
 		var fortuneDiv = template.clone();
 		fortuneDiv.removeAttr('id');
-		fortuneDiv.width(template.width());
-		fortuneDiv.height(template.height());
 		fortuneDiv.css('background-color', randomColor());
 
 		var html = fortuneDiv.html();
@@ -109,7 +107,7 @@ function animateFallingDiv(fortuneDiv, continueOnly) {
 		};
 
 		connectEventHandlers(fortuneDiv);
-		fallingArea.append(fortuneDiv);
+
 
 		// If it's new animation randomize show up time
 		if(!continueOnly) {
@@ -120,8 +118,10 @@ function animateFallingDiv(fortuneDiv, continueOnly) {
 }
 
 function fallingFortunesLoaded(data) {
+		var fallingArea = $("div#fallingArea");
 		for(var i = 0; i < data.length; i++) {
 				var fortuneDiv = createFortuneDiv(data[i]);
+				fallingArea.append(fortuneDiv);		
 
 				animateFallingDiv(fortuneDiv);
 		}
