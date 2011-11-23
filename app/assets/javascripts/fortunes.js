@@ -89,7 +89,7 @@ function animateFallingDiv(fortuneDiv, continueOnly) {
   var topPosition = {
     top: fallingArea.offset().top,
     left: fallingArea.offset().left + parseInt(Math.random() * (fallingArea.width() - fortuneDiv.width()) )
-    };
+  };
   var startPosition = continueOnly ? fortuneDiv.offset() : topPosition;
   var endPosition = {
     top: topPosition.top + fallingArea.height() - fortuneDiv.height(),
@@ -109,7 +109,7 @@ function animateFallingDiv(fortuneDiv, continueOnly) {
   connectEventHandlers(fortuneDiv);
 
 
-    // If it's new animation randomize show up time
+  // If it's new animation randomize show up time
   if(!continueOnly) {
     fortuneDiv.delay(Math.random()*2000 + 1000).show('fade', {}, 400);
   }
