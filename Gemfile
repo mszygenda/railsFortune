@@ -23,6 +23,9 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'thumbs_up'
 
+gem 'coffee-script'
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
