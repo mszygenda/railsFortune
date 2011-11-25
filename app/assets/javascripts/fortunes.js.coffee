@@ -39,7 +39,7 @@ root.scrollUpAndDown= (comicDiv) ->
 		settings =  
 			direction: "up",
 			step: step,
-			onEdge:() -> setTimeout(() -> content.autoscroll("reverse")  2000)
+			onEdge:() -> setTimeout( (() -> content.autoscroll("reverse") )  ,  2000 )
 	content.autoscroll(settings)	
 
 root.fallingFortune_mouseEnter= () ->
