@@ -84,6 +84,7 @@ div#fallingArea {
 
 div.fallingFortune {
 		background-color: #71D439;
+		color: white;
 
 		position: absolute;
 
@@ -117,6 +118,8 @@ div.comicBalloon {
 
 		background-image: url('comic.png');
 		background-repeat: no-repeat;
+
+		color: black;
 
 		width: 197px;
 		height: 141px;

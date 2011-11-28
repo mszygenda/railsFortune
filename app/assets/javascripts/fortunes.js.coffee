@@ -14,6 +14,7 @@ root.createFortuneDiv= (fortune) ->
 	fortuneDiv = template.clone()
 	fortuneDiv.removeAttr('id')
 	fortuneDiv.css('background-color', randomColor())
+	fortuneDiv.css('border-color', fortuneDiv.css('background-color'))
 
 	html = fortuneDiv.html()
 	pattern = ''
